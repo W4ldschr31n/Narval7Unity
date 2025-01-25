@@ -5,9 +5,9 @@ using UnityEngine.Serialization;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public Transform currentDestination;
+    public Waypoint currentDestination;
     public float speed;
-    public Queue<Transform> destinations;
+    public Queue<Waypoint> destinations;
     
     // Start is called before the first frame update
     void Start()
@@ -22,9 +22,10 @@ public class CharacterMovement : MonoBehaviour
     {
         if (currentDestination != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, currentDestination.position, speed * Time.deltaTime);
-            if (Vector3.Distance(transform.position, currentDestination.position) <= 0.1f)
+            transform.position = Vector3.MoveTowards(transform.position, currentDestination.transform.position, speed * Time.deltaTime);
+            if (Vector3.Distance(transform.position, currentDestination.transform.position) <= 0.1f)
             {
+                currentDestination.PlayerWalks();
                 NextDestination();
             }
         }
@@ -38,13 +39,17 @@ public class CharacterMovement : MonoBehaviour
         }
         else
         {
+            if (currentDestination != null)
+            {
+                currentDestination.Interact();
+            }
             currentDestination = null;
         }
     }
     
-    public void SetCourse(Transform[] _destinations)
+    public void SetCourse(Waypoint[] _destinations)
     {
-        destinations = new Queue<Transform>(_destinations);
+        destinations = new Queue<Waypoint>(_destinations);
         NextDestination();
     }
 }
