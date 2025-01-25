@@ -438,6 +438,7 @@ MonoBehaviour:
   Inventaire: {fileID: 2057333297}
   prefabItem: {fileID: 4744404971308755026, guid: 94cac4059a9391041b2620fff9959a8b,
     type: 3}
+  maxSize: 6
 --- !u!1 &1404762214
 GameObject:
   m_ObjectHideFlags: 0
