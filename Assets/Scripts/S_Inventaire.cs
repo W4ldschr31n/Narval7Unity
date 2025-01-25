@@ -8,7 +8,7 @@ using static UnityEditor.Progress;
 
 public class S_Inventaire : MonoBehaviour
 {
-    internal bool InventaireOpen;
+    public bool InventaireOpen;
     public GameObject Inventaire;
     public List<ItemInBag> ItemsList;
     public GameObject prefabItem;
@@ -18,6 +18,7 @@ public class S_Inventaire : MonoBehaviour
     private void Start()
     {
         ItemsList = new List<ItemInBag>();
+        Inventaire.SetActive(InventaireOpen);
     }
     public void InventaireButton()
     {
