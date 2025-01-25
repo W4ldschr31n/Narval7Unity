@@ -50,7 +50,6 @@ public class S_Inventaire : MonoBehaviour
         {
             if (ItemsList[i].Name == ItemName)
             {
-                
                 ItemsList.RemoveAt(i);
                 RefreshDisplay();
                 return;
@@ -78,7 +77,9 @@ public class S_Inventaire : MonoBehaviour
         }
         foreach (ItemInBag Item in ItemsList)
         {
-            Instantiate(prefabItem, Inventaire.transform);
+            var newItem =Instantiate(prefabItem, Inventaire.transform);
+            newItem.GetComponent<Image>().sprite = Item.Sprite;
+
         }
     }
 }

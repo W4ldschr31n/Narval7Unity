@@ -13,7 +13,12 @@ public class Waypoint : MonoBehaviour
     {
         pathway = FindObjectOfType<Pathway>();
         interactable = GetComponent<Interactable>();
+        if (GetComponent<PickUpObject>())
+        {
+            GetComponent<SpriteRenderer>().sprite = GetComponent<PickUpObject>().Item.sprite;
+        }
     }
+           
 
 
     public void PlayerWalks()
