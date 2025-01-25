@@ -198,6 +198,26 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: Groupe 8
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: f9d3f9dbd259d284dad5108f7866b7a2
+    layerID: 162
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Calque 1 copie 4
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 5a9493544b1af16458d679ac63a3f45b
+    layerID: 161
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
   - name: Groupe 6
     spriteName: Groupe 6
     isGroup: 0
