@@ -41,7 +41,7 @@ public class CharacterMovement : MonoBehaviour
         {
             if (currentDestination != null)
             {
-                Debug.Log("interact");
+                currentDestination.Interact();
             }
             currentDestination = null;
         }
