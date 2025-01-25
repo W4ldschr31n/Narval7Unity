@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class Pathway : MonoBehaviour
 {
@@ -43,17 +44,22 @@ public class Pathway : MonoBehaviour
         }
 
         Waypoint[] course;
+        int offset;
         if (index == currentCharacterPosition)
         {
             course = new []{waypoints[currentCharacterPosition]};
         }
         else if (index > currentCharacterPosition)
-        {
-             course = waypoints[currentCharacterPosition..(index+1)];
+        { 
+            offset = (!characterMovement.isIdle && characterMovement.isAscending) ? 1 : 0;
+            course = waypoints[(currentCharacterPosition+offset)..(index+1)];
+            characterMovement.isAscending = true;
         }
         else
         {
-            course = waypoints[index..(currentCharacterPosition+1)].Reverse().ToArray();
+            offset = (!characterMovement.isIdle && !characterMovement.isAscending) ? 0 : 1;
+            course = waypoints[index..(currentCharacterPosition+offset)].Reverse().ToArray();
+            characterMovement.isAscending = false;
         }
         
         characterMovement.SetCourse(course);
