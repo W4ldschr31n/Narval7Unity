@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NicolasSceneRight.unity
     guid: df3d2065316288e4c923c04867a3ef40
+  - enabled: 1
+    path: Assets/Scenes/test2d.unity
+    guid: 36f6825521bf2d1419bbbecb431bc25d
   m_configObjects: {}

@@ -1289,7 +1289,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2087388476}
         m_TargetAssemblyTypeName: S_Inventaire, Assembly-CSharp
-        m_MethodName: InventaireButtun
+        m_MethodName: InventaireButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1561,7 +1561,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2087388476}
         m_TargetAssemblyTypeName: S_Inventaire, Assembly-CSharp
-        m_MethodName: RemouvFromInventaire
+        m_MethodName: RemoveFromInventaire
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

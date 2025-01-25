@@ -6,16 +6,45 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    public FadeScreen fadeScreen;
     public int indexToLoadIn;
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void Start()
+    {
+        fadeScreen = FindObjectOfType<FadeScreen>();
+    }
+
+
     public void LoadScene(string sceneName, int _indexToLoadIn=0)
     {
         indexToLoadIn = _indexToLoadIn;
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(LoadSceneCo(sceneName));
+    }
+    
+    
+    IEnumerator LoadSceneCo(string sceneName)
+    {
+        // Fade to black and load the loading screen
+        fadeScreen.FadeIn();
+        yield return new WaitForSeconds(1f);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+
+        // Fade out as the new scene is loaded
+        fadeScreen.FadeOut();
     }
     
     

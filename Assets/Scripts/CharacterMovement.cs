@@ -8,11 +8,13 @@ public class CharacterMovement : MonoBehaviour
     public Waypoint currentDestination;
     public float speed;
     public Queue<Waypoint> destinations;
+    public bool isIdle;
+    public bool isAscending;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        isIdle = true;
     }
 
 
@@ -36,6 +38,7 @@ public class CharacterMovement : MonoBehaviour
         if (destinations.Count > 0)
         {
             currentDestination = destinations.Dequeue();
+            isIdle = false;
         }
         else
         {
@@ -44,6 +47,7 @@ public class CharacterMovement : MonoBehaviour
                 currentDestination.Interact();
             }
             currentDestination = null;
+            isIdle = true;
         }
     }
     

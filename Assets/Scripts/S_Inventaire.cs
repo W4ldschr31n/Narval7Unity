@@ -18,18 +18,10 @@ public class S_Inventaire : MonoBehaviour
     {
         ItemsList = new List<ItemInBag>();
     }
-    public void InventaireButtun()
+    public void InventaireButton()
     {
-        if (!InventaireOpen)
-        {
-            Inventaire.SetActive(true);
-            InventaireOpen = true;
-        }
-        else
-        {
-            Inventaire.SetActive(false);
-            InventaireOpen = false;
-        }
+        InventaireOpen = !InventaireOpen;
+        Inventaire.SetActive(InventaireOpen);
     }
 
     public void AddToInventaire(SO_Item Item)
@@ -41,10 +33,10 @@ public class S_Inventaire : MonoBehaviour
             RefreshDisplay();
         }
         else
-            Debug.Log("Inventaire PLein");
+            Debug.Log("Inventaire Plein");
     }
 
-    public void RemouvFromInventaire(string ItemName)
+    public void RemoveFromInventaire(string ItemName)
     {
         for (int i = 0; i < ItemsList.Count; i++)
         {
