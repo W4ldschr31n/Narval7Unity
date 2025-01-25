@@ -12,6 +12,7 @@ public class S_Inventaire : MonoBehaviour
     public GameObject Inventaire;
     public List<ItemInBag> ItemsList;
     public GameObject prefabItem;
+    public int maxSize;
 
 
     private void Start()
@@ -26,7 +27,7 @@ public class S_Inventaire : MonoBehaviour
 
     public void AddToInventaire(SO_Item Item)
     {
-        if (Inventaire.transform.childCount < 18)
+        if (Inventaire.transform.childCount < maxSize)
         {
             ItemInBag ItemToAdd = new ItemInBag(Item.itemName, Item.sprite);
             ItemsList.Add(ItemToAdd);
