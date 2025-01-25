@@ -14,6 +14,7 @@ public class LockedWaypoint : Interactable
         Debug.Log("premier");
         isLocked = true;
         inventaire = FindObjectOfType<S_Inventaire>();
+        cursorChanger = FindObjectOfType<CursorChanger>();
     }
 
     // Update is called once per frame

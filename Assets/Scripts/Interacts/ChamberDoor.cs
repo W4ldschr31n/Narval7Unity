@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,5 +23,18 @@ public class ChamberDoor : LockedWaypoint
     public override void InteractionWhenUnlocked()
     {
         sceneChanger.LoadScene(nextScene, indexInScene);
+    }
+
+    private void OnMouseEnter()
+    {
+        if(isLocked)
+            cursorChanger.GoInteract();
+        else
+            cursorChanger.GoMove(false);
+    }
+
+    private void OnMouseExit()
+    {
+        cursorChanger.GoNormal();
     }
 }
