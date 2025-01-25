@@ -15,6 +15,7 @@ public class PickUpObject : Interactable
         if (!GM.CheckHasItem(Item.itemName))
         {
             GM.AddToInventaire(Item);
+
         }
     }
 }
