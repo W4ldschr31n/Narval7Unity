@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class PickUpObject : Interactable
 {
+    S_Inventaire GM;
+    public SO_Item Item;
+    private void Start()
+    {
+        GM = FindObjectOfType<S_Inventaire>();
+    }
     public override void Interact()
     {
-        Debug.Log("Pick Up Object");
+        if (!GM.CheckHasItem(Item.itemName))
+        {
+            GM.AddToInventaire(Item);
+        }
     }
 }

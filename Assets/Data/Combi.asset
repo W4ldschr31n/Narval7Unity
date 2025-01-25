@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6906c0132f648438a6397d8eafc773, type: 3}
   m_Name: Combi
   m_EditorClassIdentifier: 
-  sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  sprite: {fileID: 21300000, guid: 9b466cbcc0b95c44d968e581e04e3cfc, type: 3}
   itemName: Combi
