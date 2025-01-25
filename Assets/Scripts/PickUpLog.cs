@@ -16,5 +16,6 @@ public class PickUpLog : Interactable
     public override void Interact()
     {
         GM.AddToJournal(nbNote);
+        Debug.Log("Recup journal: "+ nbNote);   
     }
 }

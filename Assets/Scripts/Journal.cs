@@ -10,6 +10,7 @@ public class Journal : MonoBehaviour
     public GameObject journal;
     public GameObject Pages;
 
+
     private void Start()
     {
         journal.SetActive(journalOpen);
@@ -27,7 +28,10 @@ public class Journal : MonoBehaviour
         {
             if (note == p)
             {
-
+                if (journal.GetComponent<GestionJournal>().PageDebloquer[p] != true)
+                {
+                    journal.GetComponent<GestionJournal>().PageDebloquer[p] = true;
+                }
             }
         }
     }
