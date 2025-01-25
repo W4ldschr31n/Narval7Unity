@@ -4,8 +4,18 @@ using UnityEngine;
 
 public class PickUpLog : Interactable
 {
+    public int nbNote;
+    Journal GM;
+
+
+    private void Start()
+    {
+        GM = FindObjectOfType<Journal>();
+
+    }
     public override void Interact()
     {
-        Debug.Log("Pick Up Log");
+        GM.AddToJournal(nbNote);
+        Debug.Log("Recup journal: "+ nbNote);   
     }
 }

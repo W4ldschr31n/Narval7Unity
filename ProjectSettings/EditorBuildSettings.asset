@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/test2d.unity
     guid: 36f6825521bf2d1419bbbecb431bc25d
+  - enabled: 1
+    path: Assets/Scenes/Mael.unity
+    guid: d68aaf3bf35470742b3873a5f1be09f3
   m_configObjects: {}
