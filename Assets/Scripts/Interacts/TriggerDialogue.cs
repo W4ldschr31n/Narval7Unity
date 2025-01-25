@@ -11,6 +11,7 @@ public class TriggerDialogue : Interactable
     private void Start()
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
+        cursorChanger = FindObjectOfType<CursorChanger>();
     }
 
     public override void Interact()

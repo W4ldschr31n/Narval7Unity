@@ -9,6 +9,7 @@ public class PickUpObject : Interactable
     private void Start()
     {
         GM = FindObjectOfType<S_Inventaire>();
+        cursorChanger = FindObjectOfType<CursorChanger>();
     }
     public override void Interact()
     {
@@ -17,5 +18,15 @@ public class PickUpObject : Interactable
             GM.AddToInventaire(Item);
 
         }
+    }
+    
+    private void OnMouseEnter()
+    {
+        cursorChanger.GoInteract();
+    }
+
+    private void OnMouseExit()
+    {
+        cursorChanger.GoNormal();
     }
 }
