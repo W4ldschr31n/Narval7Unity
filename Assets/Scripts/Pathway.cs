@@ -6,34 +6,32 @@ using System.Linq;
 
 public class Pathway : MonoBehaviour
 {
-    public Transform[] waypoints;
+    public Waypoint[] waypoints;
     public CharacterMovement characterMovement;
     public int currentCharacterPosition;
 
     private void Awake()
     {
-        waypoints = transform.Cast<Transform>().ToArray();;
+        waypoints = new Waypoint[transform.childCount];
+        int i = 0;
+        foreach (Waypoint wp in GetComponentsInChildren<Waypoint>())
+        {
+            wp.index = i;
+            waypoints[i] = wp;
+            i++;
+        }
         characterMovement = FindObjectOfType<CharacterMovement>();
     }
 
     void Start()
     {
-        MoveCharacter(0);        
+               
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            currentCharacterPosition = 0;
-            MoveCharacter(2);
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            currentCharacterPosition = 2;
-            MoveCharacter(0);
-        }
+        
     }
 
     public void MoveCharacter(int index)
@@ -44,13 +42,12 @@ public class Pathway : MonoBehaviour
             return;
         }
 
+        Waypoint[] course;
         if (index == currentCharacterPosition)
         {
-            return;
+            course = new []{waypoints[currentCharacterPosition]};
         }
-        
-        Transform[] course;
-        if (index > currentCharacterPosition)
+        else if (index > currentCharacterPosition)
         {
              course = waypoints[currentCharacterPosition..(index+1)];
         }
