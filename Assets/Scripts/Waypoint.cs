@@ -15,6 +15,7 @@ public class Waypoint : MonoBehaviour
     {
         pathway = FindObjectOfType<Pathway>();
         interactable = GetComponent<Interactable>();
+        soundable = GetComponent<Soundable>();
         if (GetComponent<PickUpObject>())
         {
             GetComponent<SpriteRenderer>().sprite = GetComponent<PickUpObject>().Item.sprite;

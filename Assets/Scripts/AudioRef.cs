@@ -18,7 +18,6 @@ public class AudioRef : MonoBehaviour
 
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
         MusicSource.clip = background;
         MusicSource.Play();
 
