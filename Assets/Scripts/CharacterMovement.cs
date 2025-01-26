@@ -12,11 +12,13 @@ public class CharacterMovement : MonoBehaviour
     public bool isAscending;
     public Animator animator;
     public Transform rig;
+    public bool canMove;
     
     // Start is called before the first frame update
     void Start()
     {
         isIdle = true;
+        canMove = true;
         animator = GetComponent<Animator>();
     }
 
@@ -36,6 +38,8 @@ public class CharacterMovement : MonoBehaviour
             }
         }
         animator.SetBool("walking", !isIdle);
+        if(currentDestination != null)
+            isAscending = currentDestination.transform.position.x > transform.position.x;
         rig.localScale = new Vector3(isAscending ? 1f:-1f, 1f, 1f);
     }
 
@@ -59,6 +63,8 @@ public class CharacterMovement : MonoBehaviour
     
     public void SetCourse(Waypoint[] _destinations)
     {
+        if(!canMove)
+            return;
         destinations = new Queue<Waypoint>(_destinations);
         NextDestination();
     }

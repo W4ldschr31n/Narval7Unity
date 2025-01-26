@@ -420,6 +420,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7317709992679014775, guid: 6e1d883420c5a35459508f51e75474bf,
+        type: 3}
+      propertyPath: isAscending
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -911,7 +916,7 @@ MonoBehaviour:
   inventaire: {fileID: 0}
   _light: {fileID: 965681182}
   sceneChanger: {fileID: 0}
-  nextScene: NicolasScene
+  nextScene: Level2
   indexInScene: 0
 --- !u!4 &1630794446 stripped
 Transform:

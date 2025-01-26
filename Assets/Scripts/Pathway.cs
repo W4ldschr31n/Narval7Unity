@@ -53,13 +53,11 @@ public class Pathway : MonoBehaviour
         { 
             offset = (!characterMovement.isIdle && characterMovement.isAscending) ? 1 : 0;
             course = waypoints[(currentCharacterPosition+offset)..(index+1)];
-            characterMovement.isAscending = true;
         }
         else
         {
             offset = (!characterMovement.isIdle && !characterMovement.isAscending) ? 0 : 1;
             course = waypoints[index..(currentCharacterPosition+offset)].Reverse().ToArray();
-            characterMovement.isAscending = false;
         }
         
         characterMovement.SetCourse(course);
