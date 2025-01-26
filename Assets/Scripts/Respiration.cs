@@ -13,27 +13,20 @@ public class Respiration : MonoBehaviour
     public float maxRespiration = 100.0f;
     public float decayRate = 1.0f;
 
-    internal bool IsInWather = true;
+    internal bool IsInWather = false;
     float currentRespiration;
 
 
     [Header ("Respawn")]
     public string RespawnSceneToLoad;
-
-    [Header("Vignette")]    
-    public Image vignetteImage;     
-    public float fadeInDuration = 0.5f;
+    SceneChanger sceneChanger;
 
 
-    private void Awake()
-    {
-        vignetteImage.gameObject.SetActive(true);
-    }
 
     void Start()
     {
+        sceneChanger = FindObjectOfType<SceneChanger>();
         currentRespiration = maxRespiration;
-        StartCoroutine(DeTransitionCoroutine());
     }
 
     private void Update()
@@ -45,45 +38,10 @@ public class Respiration : MonoBehaviour
         }
         if (currentRespiration <= 0)
         {
-            StartCoroutine(TransitionCoroutine());
+            sceneChanger.LoadScene(SceneManager.GetActiveScene().name, sceneChanger.indexToLoadIn);
+            currentRespiration = maxRespiration;
+            IsInWather=false;
         }
-
-
-    }
-
-    private IEnumerator TransitionCoroutine()
-    {
-        vignetteImage.gameObject.SetActive(true);
-
-        float t = 0f;
-        Color startColor = vignetteImage.color;
-        startColor.a = 0f;
-        vignetteImage.color = startColor;
-
-        while (t < fadeInDuration)
-        {
-            t += Time.deltaTime;
-            vignetteImage.color = new Color(0, 0, 0, Mathf.Lerp(0, 1, t / fadeInDuration));
-            yield return null;
-        }
-
-        yield return new WaitForSeconds(0.5f);
-
-        SceneManager.LoadScene(RespawnSceneToLoad);
-    }
-    public IEnumerator DeTransitionCoroutine()
-    {
-        float t = 0f;
-        Color startColor = vignetteImage.color;
-
-        while (t < fadeInDuration)
-        {
-            t += Time.deltaTime;
-            vignetteImage.color = new Color(0, 0, 0, Mathf.Lerp(1, 0, t / fadeInDuration));
-            yield return null;
-        }
-
-        vignetteImage.gameObject.SetActive(false);
     }
 
 }
