@@ -7,6 +7,7 @@ public class Waypoint : MonoBehaviour
 {
     public Pathway pathway;
     public Interactable interactable;
+    public Soundable soundable;
 
     public int index;
     // Start is called before the first frame update
@@ -14,6 +15,7 @@ public class Waypoint : MonoBehaviour
     {
         pathway = FindObjectOfType<Pathway>();
         interactable = GetComponent<Interactable>();
+        soundable = GetComponent<Soundable>();
         if (GetComponent<PickUpObject>())
         {
             GetComponent<SpriteRenderer>().sprite = GetComponent<PickUpObject>().Item.sprite;
@@ -39,6 +41,9 @@ public class Waypoint : MonoBehaviour
     public virtual void Interact()
     {
         if (interactable != null)
+        {
             interactable.Interact();
+            soundable.Sound();
+        }
     }
 }
