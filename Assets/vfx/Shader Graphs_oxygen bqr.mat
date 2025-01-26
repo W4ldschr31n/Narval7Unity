@@ -38,7 +38,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _SampleTexture2D_07be265c676d4c1084c3eb36fd2a51c2_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: f276e1546f6571247add64c20c7d94bf, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3ab23e45368b4f64f8010a9a6b3bf050, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -54,6 +54,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _oxygene: 1
     m_Colors: []
   m_BuildTextureStacks: []
