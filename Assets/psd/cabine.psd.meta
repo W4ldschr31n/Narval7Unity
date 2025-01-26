@@ -99,14 +99,14 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Groupe 6
+  - name: tiroir
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 524
+      x: 1295
       y: 1092
       width: 371
       height: 289
@@ -118,16 +118,16 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 524, y: 1092}
+    uvTransform: {x: 1295, y: 1092}
     spritePosition: {x: 30, y: 23}
-  - name: Groupe 7
+  - name: arnoir
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
+      x: 775
       y: 1092
       width: 512
       height: 425
@@ -139,9 +139,30 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 1092}
+    uvTransform: {x: 775, y: 1092}
     spritePosition: {x: 1093, y: 542}
-  - name: Groupe 4
+  - name: portre
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1092
+      width: 763
+      height: 935
+    spriteID: 1d9eb0e4f29bc9040a6704eef3850605
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1092}
+    spritePosition: {x: 1147, y: 0}
+  - name: bg
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -198,48 +219,38 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Groupe 8
-    spriteName: 
-    isGroup: 1
-    parentIndex: -1
-    spriteID: 8201618d8d1b07647b2daa5c798f2d4f
-    layerID: 162
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 0
-  - name: Calque 1 copie 4
-    spriteName: 
-    isGroup: 0
-    parentIndex: 0
-    spriteID: 17530ed23ae668b41a231b31d19edc2c
-    layerID: 161
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
-  - name: Groupe 6
-    spriteName: Groupe 6
+  - name: tiroir
+    spriteName: tiroir
     isGroup: 0
     parentIndex: -1
     spriteID: 06702585fda8f8345bcd9854c1c6c926
     layerID: 153
-    mosaicPosition: {x: 524, y: 1092}
+    mosaicPosition: {x: 1295, y: 1092}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Groupe 7
-    spriteName: Groupe 7
+  - name: arnoir
+    spriteName: arnoir
     isGroup: 0
     parentIndex: -1
     spriteID: dafaa97acda60bd499f187fe8c821f02
     layerID: 156
+    mosaicPosition: {x: 775, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: portre
+    spriteName: portre
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1d9eb0e4f29bc9040a6704eef3850605
+    layerID: 162
     mosaicPosition: {x: 4, y: 1092}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Groupe 4
-    spriteName: Groupe 4
+  - name: bg
+    spriteName: bg
     isGroup: 0
     parentIndex: -1
     spriteID: e27adb94d96d59a418d1d32b66d16df2
