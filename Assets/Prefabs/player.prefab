@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4177844961003104451}
   - component: {fileID: 7536124033541035389}
+  - component: {fileID: 7317709992679014775}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -54,6 +55,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7317709992679014775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1502731398620669936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446d251c8f1264945b807aa77a4b643f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDestination: {fileID: 0}
+  speed: 5
+  isIdle: 0
+  isAscending: 0
+  animator: {fileID: 7536124033541035389}
+  rig: {fileID: 1024824721927409735}
 --- !u!1001 &1807982687048198553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69,13 +88,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1ed3c5610cd07b547a5bea1c1ce23272,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: 1ed3c5610cd07b547a5bea1c1ce23272,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1ed3c5610cd07b547a5bea1c1ce23272,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.22
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1ed3c5610cd07b547a5bea1c1ce23272,
         type: 3}

@@ -2062,7 +2062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeScreen: {fileID: 1888833360}
-  indexToLoadIn: 0
+  indexToLoadIn: 1
 --- !u!4 &1255518178
 Transform:
   m_ObjectHideFlags: 0

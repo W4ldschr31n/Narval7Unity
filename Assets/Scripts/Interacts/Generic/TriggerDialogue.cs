@@ -7,6 +7,7 @@ public class TriggerDialogue : Interactable
 {
     public Dialogue dialogue;
     public DialogueManager dialogueManager;
+    public bool hasTriggered;
 
     private void Start()
     {
@@ -16,6 +17,21 @@ public class TriggerDialogue : Interactable
 
     public override void Interact()
     {
-        dialogueManager.StartDialogue(dialogue);
+        if (!hasTriggered)
+        {
+            dialogueManager.StartDialogue(dialogue);
+            hasTriggered = true;
+        }
+    }
+
+    private void OnMouseEnter()
+    {
+        if(!hasTriggered)
+            cursorChanger.GoInteract();
+    }
+
+    private void OnMouseExit()
+    {
+        cursorChanger.GoNormal();
     }
 }
