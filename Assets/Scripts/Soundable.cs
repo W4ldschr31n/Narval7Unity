@@ -9,7 +9,7 @@ public class Soundable : MonoBehaviour
 
     public void Sound()
     {
-        
+        FindObjectOfType<AudioRef>().PlaySFX(clip);
     }
 
 }
