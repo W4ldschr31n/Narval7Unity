@@ -30,6 +30,8 @@ public class S_Inventaire : MonoBehaviour
         {
             ItemInBag ItemToAdd = new ItemInBag(Item.itemName, Item.sprite);
             ItemsList.Add(ItemToAdd);
+            if(!InventaireOpen)
+                InventaireButton();
             RefreshDisplay();
         }
         else
