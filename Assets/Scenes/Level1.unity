@@ -1193,7 +1193,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: 2cf5b341d8ccee44b959daaffbb00859, type: 2}
   dialogueManager: {fileID: 0}
+  characterMovement: {fileID: 0}
   hasTriggered: 0
+  onDialogueEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &2114549535
 PrefabInstance:
   m_ObjectHideFlags: 0
