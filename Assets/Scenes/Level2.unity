@@ -840,7 +840,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1779835072}
   - component: {fileID: 1779835071}
-  - component: {fileID: 1779835070}
   - component: {fileID: 1779835073}
   m_Layer: 0
   m_Name: Main Camera
@@ -849,14 +848,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1779835070
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1779835069}
-  m_Enabled: 1
 --- !u!20 &1779835071
 Camera:
   m_ObjectHideFlags: 0
@@ -1078,6 +1069,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2052604464}
+    - targetCorrespondingSourceObject: {fileID: 7864242245976467591, guid: 5f5a5de76cc5ca84b9a4feec6f484adb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2052604465}
   m_SourcePrefab: {fileID: 100100000, guid: 5f5a5de76cc5ca84b9a4feec6f484adb, type: 3}
 --- !u!4 &2052604462 stripped
 Transform:
@@ -1106,6 +1101,21 @@ MonoBehaviour:
   waterAnimator: {fileID: 1280066328}
   exitSas: {fileID: 1128260484}
   isUsed: 0
+--- !u!114 &2052604465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052604463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89db20e611dda9d43a7d10016d2b8e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 68844734fcb58484490457f83724a60a, type: 3}
+  clip1: {fileID: 8300000, guid: f25b3c49093f73b41b21902bc4ec4773, type: 3}
+  volume: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

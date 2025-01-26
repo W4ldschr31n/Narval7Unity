@@ -236,6 +236,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 29944279}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &77841067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1502731398620669936, guid: 6e1d883420c5a35459508f51e75474bf,
+    type: 3}
+  m_PrefabInstance: {fileID: 309426814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &77841068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 77841067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89db20e611dda9d43a7d10016d2b8e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 4b756b147cb410f40a88ef305d8e8b10, type: 3}
+  clip1: {fileID: 0}
+  volume: 1
 --- !u!1001 &244411325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -423,7 +444,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1502731398620669936, guid: 6e1d883420c5a35459508f51e75474bf,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 77841068}
   m_SourcePrefab: {fileID: 100100000, guid: 6e1d883420c5a35459508f51e75474bf, type: 3}
 --- !u!1 &585360825 stripped
 GameObject:
@@ -542,6 +567,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1608051073}
+    - targetCorrespondingSourceObject: {fileID: 7864242245976467591, guid: 5f5a5de76cc5ca84b9a4feec6f484adb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1608051074}
   m_SourcePrefab: {fileID: 100100000, guid: 5f5a5de76cc5ca84b9a4feec6f484adb, type: 3}
 --- !u!1001 &959327522
 PrefabInstance:
@@ -710,6 +739,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 959327525}
+    - targetCorrespondingSourceObject: {fileID: 307278151726675084, guid: a7dc023390746b749ac4121d67bb8062,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 959327526}
   m_SourcePrefab: {fileID: 100100000, guid: a7dc023390746b749ac4121d67bb8062, type: 3}
 --- !u!4 &959327523 stripped
 Transform:
@@ -737,6 +770,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: c2476424f303e8e4dbadca1ee5f05e40, type: 2}
   locker: {fileID: 244411327}
+--- !u!114 &959327526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959327524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89db20e611dda9d43a7d10016d2b8e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: acca827df4826cc47b06d2ad88a7035d, type: 3}
+  clip1: {fileID: 8300000, guid: 5d4517d01b6b6324d9a033ca19448108, type: 3}
+  volume: 1
 --- !u!1 &965681182 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8653719598885068355, guid: 59b51ec82fca95246aed173f3eff3f1c,
@@ -913,6 +961,21 @@ MonoBehaviour:
   sceneChanger: {fileID: 0}
   nextScene: NicolasScene
   indexInScene: 0
+--- !u!114 &1608051074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585360825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89db20e611dda9d43a7d10016d2b8e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: baea8954ce39d8741b45bfd519ffd7aa, type: 3}
+  clip1: {fileID: 0}
+  volume: 1
 --- !u!4 &1630794446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3337318869298216754, guid: 5f5a5de76cc5ca84b9a4feec6f484adb,
@@ -1338,6 +1401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: adcc525c4b4e43f49a28c7ac4194dc91, type: 3}
+  clip1: {fileID: 8300000, guid: 5d3e1cb54949f394f8fa43f55de3a10b, type: 3}
+  volume: 0.2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
