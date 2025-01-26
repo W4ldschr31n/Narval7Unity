@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GestionJournal : MonoBehaviour
 {
@@ -9,21 +11,15 @@ public class GestionJournal : MonoBehaviour
     public int maxPage = 10;
     public GameObject Page;
     public Dictionary<int, bool> PageDebloquer;
+    public Text txtPages;
 
     private void Start()
     {
         PageDebloquer = new Dictionary<int, bool>()
         {
-            { 0, true},
+            { 0, false},
             { 1, false},
             { 2, false },
-            { 3, false },
-            { 4, false },
-            { 5, true },
-            { 6, false },
-            { 7, false },
-            { 8, true },
-            { 9, false },
         };
         indexPage = 0;
         Refresh();
@@ -39,6 +35,7 @@ public class GestionJournal : MonoBehaviour
             if(p==indexPage)
             {
                 Page.transform.GetChild(p).gameObject.SetActive(true);
+                txtPages.text = "Page "+ p+1.ToString() + "/3";
             }
         }
     }
@@ -70,6 +67,17 @@ public class GestionJournal : MonoBehaviour
             }
             indexCourant--;
             
+        }
+        Refresh();
+    }
+    public void AddPages(string nbNote)
+    {
+        for (int nb = 0; nb < PageDebloquer.Count; nb++)
+        {
+            if(nbNote == nb.ToString())
+            {
+                PageDebloquer[nb] = true;
+            }
         }
         Refresh();
     }
