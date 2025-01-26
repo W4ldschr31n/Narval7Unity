@@ -938,6 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPage: 3
   Page: {fileID: 1609840696}
+  txtPages: {fileID: 0}
 --- !u!114 &772765962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1752,7 +1753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c79557930ecc246ab736cbad4fdceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstScene: Level2
+  firstScene: Level1
 --- !u!114 &1255518180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1800,7 +1801,6 @@ MonoBehaviour:
   jauge: {fileID: 182800026}
   maxRespiration: 100
   decayRate: 10
-  RespawnSceneToLoad: Level2
 --- !u!114 &1255518183
 MonoBehaviour:
   m_ObjectHideFlags: 0

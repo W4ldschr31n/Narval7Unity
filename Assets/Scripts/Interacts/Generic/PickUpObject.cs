@@ -6,8 +6,10 @@ public class PickUpObject : Interactable
 {
     S_Inventaire GM;
     public SO_Item Item;
+    GestionJournal GJ;
     private void Start()
     {
+        GJ = FindObjectOfType<GestionJournal>();
         GM = FindObjectOfType<S_Inventaire>();
         cursorChanger = FindObjectOfType<CursorChanger>();
     }
@@ -17,6 +19,10 @@ public class PickUpObject : Interactable
         {
             GM.AddToInventaire(Item);
             OnPickup();
+        }
+        if (Item.sprite.name == "Note")
+        {
+            GJ.AddPages(Item.name);
         }
     }
     
