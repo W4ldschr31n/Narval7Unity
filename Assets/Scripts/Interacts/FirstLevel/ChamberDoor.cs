@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class ChamberDoor : LockedWaypoint
 {
-    public GameObject light;
+    public GameObject _light;
     public SceneChanger sceneChanger;
     public string nextScene;
     public int indexInScene;
-    void Start()
+    new void Start()
     {
         base.Start();
         Debug.Log("Deuxieme");
@@ -17,7 +17,7 @@ public class ChamberDoor : LockedWaypoint
     }
     public override void UnlockWaypoint()
     {
-        light.SetActive(true);
+        _light.SetActive(true);
     }
 
     public override void InteractionWhenUnlocked()

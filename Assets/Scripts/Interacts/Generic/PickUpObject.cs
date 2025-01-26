@@ -16,7 +16,7 @@ public class PickUpObject : Interactable
         if (!GM.CheckHasItem(Item.itemName))
         {
             GM.AddToInventaire(Item);
-
+            OnPickup();
         }
     }
     
@@ -28,5 +28,10 @@ public class PickUpObject : Interactable
     private void OnMouseExit()
     {
         cursorChanger.GoNormal();
+    }
+
+    public virtual void OnPickup()
+    {
+        return;
     }
 }
