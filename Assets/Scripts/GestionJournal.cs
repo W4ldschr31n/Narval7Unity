@@ -35,7 +35,7 @@ public class GestionJournal : MonoBehaviour
             if(p==indexPage)
             {
                 Page.transform.GetChild(p).gameObject.SetActive(true);
-                txtPages.text = "Page "+ p+1.ToString() + "/3";
+                txtPages.text = $"Page {p}/3";
             }
         }
     }
@@ -70,15 +70,9 @@ public class GestionJournal : MonoBehaviour
         }
         Refresh();
     }
-    public void AddPages(string nbNote)
+    public void AddPages(int nbNote)
     {
-        for (int nb = 0; nb < PageDebloquer.Count; nb++)
-        {
-            if(nbNote == nb.ToString())
-            {
-                PageDebloquer[nb] = true;
-            }
-        }
+        PageDebloquer[nbNote] = true;
         Refresh();
     }
 }

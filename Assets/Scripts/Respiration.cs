@@ -39,7 +39,6 @@ public class Respiration : MonoBehaviour
         {
             sceneChanger.LoadScene(SceneManager.GetActiveScene().name, sceneChanger.indexToLoadIn);
             currentRespiration = maxRespiration;
-            IsInWather=false;
         }
     }
 

@@ -322,7 +322,7 @@ PrefabInstance:
     - target: {fileID: -4357015063534484453, guid: 6d735df6965a5a14f92d7165228a84c1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1903946852884733258, guid: 6d735df6965a5a14f92d7165228a84c1,
         type: 3}
@@ -911,7 +911,7 @@ MonoBehaviour:
   inventaire: {fileID: 0}
   _light: {fileID: 965681182}
   sceneChanger: {fileID: 0}
-  nextScene: NicolasScene
+  nextScene: Level2
   indexInScene: 0
 --- !u!4 &1630794446 stripped
 Transform:
@@ -1158,10 +1158,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2078096840}
-    - targetCorrespondingSourceObject: {fileID: 7864242245976467591, guid: 5f5a5de76cc5ca84b9a4feec6f484adb,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2078096845}
   m_SourcePrefab: {fileID: 100100000, guid: 5f5a5de76cc5ca84b9a4feec6f484adb, type: 3}
 --- !u!1 &2078096839 stripped
 GameObject:
@@ -1188,19 +1184,6 @@ MonoBehaviour:
   onDialogueEndEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2078096845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078096839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d94c8dd4f8fba0448f89b89239886fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Item: {fileID: 11400000, guid: 1c6d9c6d80dd58242b6c5f525c30ce2e, type: 2}
 --- !u!1001 &2114549535
 PrefabInstance:
   m_ObjectHideFlags: 0
