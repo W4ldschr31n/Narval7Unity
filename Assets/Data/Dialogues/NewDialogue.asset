@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb6906c0132f648438a6397d8eafc773, type: 3}
-  m_Name: Note2
+  m_Script: {fileID: 11500000, guid: b7a353c910d05b14d844e879f54efadf, type: 3}
+  m_Name: NewDialogue
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
-  itemName: Note2
+  npcName: Narval 7
+  quotes:
+  - Waouh c'est petit ici
+  - Je devrais sortir

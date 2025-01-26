@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/InitScene.unity
     guid: 42609adddcdb82c499d708250ea21bf7
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/NicolasScene.unity
     guid: 40cc8aff5b03b2a409cd305102def2e6
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/test2d.unity
     guid: 36f6825521bf2d1419bbbecb431bc25d
+  - enabled: 1
+    path: Assets/Scenes/Mael.unity
+    guid: d68aaf3bf35470742b3873a5f1be09f3
   m_configObjects: {}

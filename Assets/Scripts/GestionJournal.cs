@@ -6,11 +6,27 @@ using UnityEngine;
 public class GestionJournal : MonoBehaviour
 {
     int indexPage;
-    int maxPage = 10;
+    public int maxPage = 10;
     public GameObject Page;
+    public Dictionary<int, bool> PageDebloquer;
 
     private void Start()
     {
+        PageDebloquer = new Dictionary<int, bool>()
+        {
+            { 0, true},
+            { 1, false},
+            { 2, false },
+            { 3, false },
+            { 4, false },
+            { 5, true },
+            { 6, false },
+            { 7, false },
+            { 8, true },
+            { 9, false },
+        };
+        indexPage = 0;
+        Refresh();
     }
     void Refresh()
     {
@@ -28,16 +44,33 @@ public class GestionJournal : MonoBehaviour
     }
     public void PlusPage()
     {
-        indexPage++;
-        if (indexPage >= maxPage)
-            indexPage = maxPage;
+        int indexCourant = indexPage + 1;
+        while(indexCourant%maxPage != indexPage)
+        {
+            if(PageDebloquer[indexCourant % maxPage])
+            {
+                indexPage = indexCourant % maxPage;
+                break;
+            }
+            indexCourant++;
+        }
         Refresh();
     }
     public void MoinsPage()
     {
-        indexPage--;
-        if (indexPage <= 0)
-            indexPage = 0;
+        int indexCourant = indexPage - 1;
+        while (indexCourant % maxPage != indexPage)
+        {
+            if (indexCourant < 0)
+                indexCourant = maxPage - 1;
+            if (PageDebloquer[indexCourant % maxPage])
+            {
+                indexPage = indexCourant % maxPage;
+                break;
+            }
+            indexCourant--;
+            
+        }
         Refresh();
     }
 }
