@@ -9,6 +9,7 @@ public class CursorChanger : MonoBehaviour
     public Texture2D cursorMove;
     public Texture2D cursorMoveLeft;
     public Texture2D cursorMoveRight;
+    public Texture2D cursorListen;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,5 +40,10 @@ public class CursorChanger : MonoBehaviour
     public void GoChangeScene(bool isLeft)
     {
         Cursor.SetCursor(isLeft?cursorMoveLeft:cursorMoveRight, Vector2.zero, CursorMode.Auto);
+    }
+
+    public void GoListen()
+    {
+        Cursor.SetCursor(cursorListen, Vector2.zero, CursorMode.Auto);
     }
 }
