@@ -30,7 +30,7 @@ public class ChamberDoor : LockedWaypoint
         if(isLocked)
             cursorChanger.GoInteract();
         else
-            cursorChanger.GoMove(false);
+            cursorChanger.GoChangeScene(false);
     }
 
     private void OnMouseExit()

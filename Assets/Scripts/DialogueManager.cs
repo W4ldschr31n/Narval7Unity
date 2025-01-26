@@ -35,6 +35,7 @@ public class DialogueManager : MonoBehaviour
         // Display the dialogue
         animator.SetBool("IsOpen", true);
         nameText.text = dialogue.npcName;
+        FindObjectOfType<CharacterMovement>().canMove = false;
         DisplayNextQuote();
     }
 
@@ -51,6 +52,7 @@ public class DialogueManager : MonoBehaviour
         // Display the dialogue
         animator.SetBool("IsOpen", true);
         nameText.text = string.Empty;
+        FindObjectOfType<CharacterMovement>().canMove = false;
         DisplayNextQuote();
     }
 
@@ -94,6 +96,7 @@ public class DialogueManager : MonoBehaviour
             animator.SetBool("IsOpen", false);
         dialogueCallback?.Invoke();
         isCoroutinePlaying = false;
+        FindObjectOfType<CharacterMovement>().canMove = true;
     }
 
     private List<string> WrapRichText(string quote)

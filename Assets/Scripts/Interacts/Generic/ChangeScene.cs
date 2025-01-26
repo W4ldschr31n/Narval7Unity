@@ -24,6 +24,6 @@ public class ChangeScene : Interactable
 
     private void OnMouseEnter()
     {
-        cursorChanger.GoMove(isLeft);
+        cursorChanger.GoChangeScene(isLeft);
     }
 }
