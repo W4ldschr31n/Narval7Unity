@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +17,7 @@ public class GestionJournal : MonoBehaviour
     {
         PageDebloquer = new Dictionary<int, bool>()
         {
-            { 0, true},
+            { 0, false},
             { 1, false},
             { 2, false },
         };
@@ -66,6 +67,17 @@ public class GestionJournal : MonoBehaviour
             }
             indexCourant--;
             
+        }
+        Refresh();
+    }
+    public void AddPages(string nbNote)
+    {
+        for (int nb = 0; nb < PageDebloquer.Count; nb++)
+        {
+            if(nbNote == nb.ToString())
+            {
+                PageDebloquer[nb] = true;
+            }
         }
         Refresh();
     }

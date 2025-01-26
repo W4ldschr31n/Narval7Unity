@@ -18,7 +18,6 @@ public class Respiration : MonoBehaviour
 
 
     [Header ("Respawn")]
-    public string RespawnSceneToLoad;
     SceneChanger sceneChanger;
 
 
