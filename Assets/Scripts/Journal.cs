@@ -24,15 +24,6 @@ public class Journal : MonoBehaviour
     }
     public void AddToJournal(int note)
     {
-        for (int p = 0; p < Pages.transform.childCount; p++)
-        {
-            if (note == p)
-            {
-                if (journal.GetComponent<GestionJournal>().PageDebloquer[p] != true)
-                {
-                    journal.GetComponent<GestionJournal>().PageDebloquer[p] = true;
-                }
-            }
-        }
+        journal.GetComponent<GestionJournal>().PageDebloquer[note] = true;
     }
 }

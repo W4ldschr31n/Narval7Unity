@@ -25,8 +25,9 @@ public class CharacterMovement : MonoBehaviour
         if (currentDestination != null)
         {
             transform.position = Vector3.MoveTowards(transform.position, currentDestination.transform.position, speed * Time.deltaTime);
-            if (Vector3.Distance(transform.position, currentDestination.transform.position) <= 0.1f)
+            if (Vector3.Distance(transform.position, currentDestination.transform.position) <= 0.01f)
             {
+                transform.position = currentDestination.transform.position;
                 currentDestination.PlayerWalks();
                 NextDestination();
             }

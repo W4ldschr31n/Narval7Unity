@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathway: {fileID: 0}
+  interactable: {fileID: 0}
   index: 0
 --- !u!212 &7943649064414230535
 SpriteRenderer:
