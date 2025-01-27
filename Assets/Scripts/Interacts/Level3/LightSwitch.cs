@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightSwitch : Interactable
 {
-    public GameObject dark;
+    public Animator animator;
 
     public bool hasInteracted;
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class LightSwitch : Interactable
     {
         if (!hasInteracted)
         {
-            dark.SetActive(false);
+            animator.Play("arcade_lightup");
             hasInteracted = true;
         }
     }
