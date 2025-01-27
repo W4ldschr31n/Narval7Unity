@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ArcadeGame : Interactable
 {
@@ -11,7 +12,7 @@ public class ArcadeGame : Interactable
     {
         if (isActivable)
         {
-            
+            SceneManager.LoadScene("testgame", LoadSceneMode.Additive);
         }
     }
 
