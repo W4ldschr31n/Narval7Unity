@@ -306,6 +306,9 @@ MonoBehaviour:
   rightSprite: {fileID: 21300000, guid: 1e6ba2a7c5827d94cac825e3c20f4309, type: 3}
   upSprite: {fileID: 21300000, guid: 53933bdeeacf4d84fba4f477b4b57e84, type: 3}
   downSprite: {fileID: 21300000, guid: ce869ceabcb3a094387896b824f00133, type: 3}
+  winSound: {fileID: 8300000, guid: bb19d77368082034295b764a07c3248b, type: 3}
+  loseSound: {fileID: 8300000, guid: 4379834a5c62d5e4a8a4324869b86a01, type: 3}
+  buttonSound: {fileID: 8300000, guid: 797f19b40563a044cb1b9d567d9536ef, type: 3}
 --- !u!95 &3123918987826056686
 Animator:
   serializedVersion: 5

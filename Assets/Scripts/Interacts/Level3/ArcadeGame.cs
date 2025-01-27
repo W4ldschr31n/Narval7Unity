@@ -9,6 +9,7 @@ public class ArcadeGame : Interactable
     public SO_Item itemReward;
     public AudioClip audioClip;
     public GameObject simonGame;
+    public GameObject enemy;
 
     public override void Interact()
     {
@@ -34,5 +35,6 @@ public class ArcadeGame : Interactable
         FindObjectOfType<DialogueManager>().DisplaySimpleMessage("Le jeu vous offre un Furby en récompense");
         FindObjectOfType<S_Inventaire>().AddToInventaire(itemReward);
         FindObjectOfType<AudioRef>().PlaySFX(audioClip);
+        enemy.SetActive(true);
     }
 }

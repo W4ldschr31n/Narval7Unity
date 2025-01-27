@@ -35,6 +35,10 @@ public class SimonGame : MonoBehaviour
     private Dictionary<DanceDirection, Sprite> dirToSprite;
     private List<DanceDirection> playerInput = new List<DanceDirection>();
     private DanceRound currentRound;
+
+    public AudioClip winSound;
+    public AudioClip loseSound;
+    public AudioClip buttonSound;
     // Start is called before the first frame update
     public void StartGame()
     {
@@ -84,10 +88,10 @@ public class SimonGame : MonoBehaviour
             if (playerInput.SequenceEqual(currentRound.danceDirections))
             {
                 gameAnimator.Play("winSimon");
-                Win();
-                return;
+                
                 if (danceRoundsQueue.Count > 0)
                 {
+                    FindObjectOfType<AudioRef>().PlaySFX(winSound);
                     currentRound = danceRoundsQueue.Dequeue();
                     StartCoroutine(PlayRound(currentRound));
                 }
@@ -97,8 +101,13 @@ public class SimonGame : MonoBehaviour
             else
             {
                 gameAnimator.Play("loseSimon");
+                FindObjectOfType<AudioRef>().PlaySFX(loseSound);
                 StartCoroutine(PlayRound(currentRound));
             }
+        }
+        else
+        {
+            FindObjectOfType<AudioRef>().PlaySFX(buttonSound);
         }
     }
 
