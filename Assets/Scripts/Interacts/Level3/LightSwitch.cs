@@ -7,6 +7,7 @@ public class LightSwitch : Interactable
     public Animator animator;
 
     public bool hasInteracted;
+    public ArcadeGame game;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class LightSwitch : Interactable
         {
             animator.Play("arcade_lightup");
             hasInteracted = true;
+            game.isActivable = true;
         }
     }
 
