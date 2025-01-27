@@ -43,7 +43,8 @@ public class Waypoint : MonoBehaviour
         if (interactable != null)
         {
             interactable.Interact();
-            soundable.Sound();
         }
+        if(soundable != null)
+            soundable.Sound();
     }
 }

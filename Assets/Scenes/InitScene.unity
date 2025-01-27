@@ -938,7 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPage: 3
   Page: {fileID: 1609840696}
-  txtPages: {fileID: 0}
+  txtPages: {fileID: 504646200}
 --- !u!114 &772765962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,7 +1833,7 @@ MonoBehaviour:
   cursorMove: {fileID: 2800000, guid: 37b8ccb0f437fdc47814e92d8449bef6, type: 3}
   cursorMoveLeft: {fileID: 2800000, guid: 03aca5ffee475884997f83d1b07ce004, type: 3}
   cursorMoveRight: {fileID: 2800000, guid: fdfa24f1ac73ae24db16529444df0969, type: 3}
-  cursorListen: {fileID: 0}
+  cursorListen: {fileID: 2800000, guid: 3033e02e3309d68419218606ab7511da, type: 3}
 --- !u!1 &1404762214
 GameObject:
   m_ObjectHideFlags: 0

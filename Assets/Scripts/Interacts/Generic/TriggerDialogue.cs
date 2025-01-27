@@ -33,7 +33,7 @@ public class TriggerDialogue : Interactable
     private void OnMouseEnter()
     {
         if(!hasTriggered)
-            cursorChanger.GoInteract();
+            cursorChanger.GoListen();
     }
 
     private void OnMouseExit()
