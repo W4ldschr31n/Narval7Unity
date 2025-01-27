@@ -1800,14 +1800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jauge: {fileID: 182800026}
   maxRespiration: 100
-<<<<<<< HEAD
   decayRate: 0.1
-  RespawnSceneToLoad: Level2
-  vignetteImage: {fileID: 757856034}
-  fadeInDuration: 0.5
-=======
-  decayRate: 10
->>>>>>> 677235b5ffcd4960918de183c5390f65a19d6c18
 --- !u!114 &1255518183
 MonoBehaviour:
   m_ObjectHideFlags: 0
