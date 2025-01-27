@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb6906c0132f648438a6397d8eafc773, type: 3}
-  m_Name: ferbi
+  m_Name: furby2
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 36c48947c29e25f41850e22c4c3a8a70, type: 3}
-  itemName: ferbi
+  sprite: {fileID: 21300000, guid: 5b499cfd238539d4e82f054f5435302f, type: 3}
+  itemName: furby2

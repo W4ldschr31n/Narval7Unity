@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum DanceDirection
 {
@@ -35,7 +36,7 @@ public class SimonGame : MonoBehaviour
     private List<DanceDirection> playerInput = new List<DanceDirection>();
     private DanceRound currentRound;
     // Start is called before the first frame update
-    void Start()
+    public void StartGame()
     {
         dirToSprite = new Dictionary<DanceDirection, Sprite>()
         {
@@ -83,13 +84,15 @@ public class SimonGame : MonoBehaviour
             if (playerInput.SequenceEqual(currentRound.danceDirections))
             {
                 gameAnimator.Play("winSimon");
+                Win();
+                return;
                 if (danceRoundsQueue.Count > 0)
                 {
                     currentRound = danceRoundsQueue.Dequeue();
                     StartCoroutine(PlayRound(currentRound));
                 }
                 else
-                    Debug.Log("This is the end");
+                    Win();
             }
             else
             {
@@ -97,5 +100,10 @@ public class SimonGame : MonoBehaviour
                 StartCoroutine(PlayRound(currentRound));
             }
         }
+    }
+
+    public void Win()
+    {
+        FindObjectOfType<ArcadeGame>().GiveReward();
     }
 }

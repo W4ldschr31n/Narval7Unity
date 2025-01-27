@@ -15,11 +15,6 @@ public class SoundData
 public class Soundable : MonoBehaviour
 {
     public List<SoundData> soundData = new List<SoundData>();
-    public AudioClip clip;
-    public AudioClip clip1;
-
-    public float volume = 1.0f;
-    public float volume1 = 1.0f;
 
     public void Sound()
     {
