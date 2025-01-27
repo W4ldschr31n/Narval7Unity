@@ -23,7 +23,6 @@ public class SimonGame : MonoBehaviour
 {
     public GameObject buttons;
     public SpriteRenderer hint;
-    public Animator playerAnimator;
     public Animator gameAnimator;
     public List<DanceRound> danceRounds = new List<DanceRound>();
     public Queue<DanceRound> danceRoundsQueue;
@@ -33,6 +32,7 @@ public class SimonGame : MonoBehaviour
     public Sprite upSprite;
     public Sprite downSprite;
     private Dictionary<DanceDirection, Sprite> dirToSprite;
+    private Dictionary<DanceDirection, String> dirToAnim;
     private List<DanceDirection> playerInput = new List<DanceDirection>();
     private DanceRound currentRound;
 
@@ -48,6 +48,13 @@ public class SimonGame : MonoBehaviour
             { DanceDirection.Right, rightSprite },
             { DanceDirection.Up, upSprite },
             { DanceDirection.Down, downSprite }
+        };
+        dirToAnim = new Dictionary<DanceDirection, String>()
+        {
+            { DanceDirection.Left, "chara_dance_left" },
+            { DanceDirection.Up, "chara_dance_up" },
+            { DanceDirection.Down, "chara_dance_down" },
+            { DanceDirection.Right, "chara_dance_right" },
         };
         danceRoundsQueue = new Queue<DanceRound>(danceRounds);
         currentRound = danceRoundsQueue.Dequeue();
@@ -82,6 +89,7 @@ public class SimonGame : MonoBehaviour
     {
         if (!isPlayerTurn)
             return;
+        gameAnimator.Play(dirToAnim[direction]);
         playerInput.Add(direction);
         if (playerInput.Count >= currentRound.danceDirections.Count)
         {
