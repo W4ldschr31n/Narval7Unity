@@ -7,24 +7,34 @@ using UnityEngine.UI;
 
 public class Respiration : MonoBehaviour
 {
-    [Header("Jauge")]
-    public Image jauge;
+    public GameObject jauge; 
+    [Header("ProgressBar")]
+    public Image progressBar;
     public float maxRespiration = 100.0f;
     public float decayRate = 1.0f;
-
-    internal bool IsInWather = false;
+    public bool IsInWather;
     float currentRespiration;
-
-
-    [Header ("Respawn")]
+    
     SceneChanger sceneChanger;
-
-
 
     void Start()
     {
         sceneChanger = FindObjectOfType<SceneChanger>();
         currentRespiration = maxRespiration;
+        Deactivate();
+    }
+
+    public void Activate()
+    {
+        IsInWather = true;
+        jauge.SetActive(true);
+        currentRespiration = maxRespiration;
+    }
+
+    public void Deactivate()
+    {
+        IsInWather = false;
+        jauge.SetActive(false);
     }
 
     private void Update()
@@ -32,7 +42,7 @@ public class Respiration : MonoBehaviour
         if (IsInWather)
         {   
             currentRespiration -= Time.deltaTime * decayRate;
-            jauge.fillAmount = currentRespiration / maxRespiration;
+            progressBar.fillAmount = currentRespiration / maxRespiration;
         }
         if (currentRespiration <= 0)
         {

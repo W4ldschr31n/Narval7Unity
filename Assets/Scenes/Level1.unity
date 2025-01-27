@@ -254,6 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89db20e611dda9d43a7d10016d2b8e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundData: []
   clip: {fileID: 8300000, guid: 4b756b147cb410f40a88ef305d8e8b10, type: 3}
   clip1: {fileID: 0}
   volume: 1
@@ -392,6 +393,24 @@ PrefabInstance:
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 6d735df6965a5a14f92d7165228a84c1,
     type: 3}
+--- !u!1 &244411326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8590104251570292077, guid: 6d735df6965a5a14f92d7165228a84c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 244411325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &244411327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8909958455854718488, guid: 6d735df6965a5a14f92d7165228a84c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 244411325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &244411328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4907047618869749711, guid: 6d735df6965a5a14f92d7165228a84c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 244411325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &309426814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -581,10 +600,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1608051073}
-    - targetCorrespondingSourceObject: {fileID: 7864242245976467591, guid: 5f5a5de76cc5ca84b9a4feec6f484adb,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1608051074}
   m_SourcePrefab: {fileID: 100100000, guid: 5f5a5de76cc5ca84b9a4feec6f484adb, type: 3}
 --- !u!1001 &959327522
 PrefabInstance:
@@ -783,7 +798,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: c2476424f303e8e4dbadca1ee5f05e40, type: 2}
-  locker: {fileID: 0}
+  locker: {fileID: 244411326}
+  lockerSound: {fileID: 8300000, guid: acca827df4826cc47b06d2ad88a7035d, type: 3}
 --- !u!114 &959327526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,6 +812,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89db20e611dda9d43a7d10016d2b8e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundData:
+  - clip: {fileID: 8300000, guid: acca827df4826cc47b06d2ad88a7035d, type: 3}
+    volume: 1
+    oneShot: 1
+    hasBeenPlayed: 0
+  - clip: {fileID: 8300000, guid: 5d4517d01b6b6324d9a033ca19448108, type: 3}
+    volume: 1
+    oneShot: 1
+    hasBeenPlayed: 0
   clip: {fileID: 8300000, guid: acca827df4826cc47b06d2ad88a7035d, type: 3}
   clip1: {fileID: 8300000, guid: 5d4517d01b6b6324d9a033ca19448108, type: 3}
   volume: 1
@@ -823,25 +848,11 @@ MonoBehaviour:
   itemNeeded: {fileID: 11400000, guid: c2476424f303e8e4dbadca1ee5f05e40, type: 2}
   inventaire: {fileID: 0}
   _light: {fileID: 1891980629}
+  door: {fileID: 244411328}
   sceneChanger: {fileID: 0}
   nextScene: Level2
   indexInScene: 0
---- !u!114 &1608051074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585360825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89db20e611dda9d43a7d10016d2b8e42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: baea8954ce39d8741b45bfd519ffd7aa, type: 3}
-  clip1: {fileID: 0}
-  volume: 1
-  volume1: 1
+  doorSound: {fileID: 8300000, guid: baea8954ce39d8741b45bfd519ffd7aa, type: 3}
 --- !u!4 &1630794446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3337318869298216754, guid: 5f5a5de76cc5ca84b9a4feec6f484adb,
@@ -1337,7 +1348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c701b10475eb994191053307aa0c1cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locker: {fileID: 0}
+  locker: {fileID: 244411327}
 --- !u!114 &2114549540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1350,6 +1361,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89db20e611dda9d43a7d10016d2b8e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundData:
+  - clip: {fileID: 8300000, guid: adcc525c4b4e43f49a28c7ac4194dc91, type: 3}
+    volume: 0.2
+    oneShot: 1
+    hasBeenPlayed: 0
+  - clip: {fileID: 8300000, guid: 5d3e1cb54949f394f8fa43f55de3a10b, type: 3}
+    volume: 1
+    oneShot: 1
+    hasBeenPlayed: 0
   clip: {fileID: 8300000, guid: adcc525c4b4e43f49a28c7ac4194dc91, type: 3}
   clip1: {fileID: 8300000, guid: 5d3e1cb54949f394f8fa43f55de3a10b, type: 3}
   volume: 0.2

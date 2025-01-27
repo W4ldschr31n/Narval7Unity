@@ -9,17 +9,6 @@ public class ExitSas : Interactable
     public string sceneToLoad;
 
     public int indexToLoadIn;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public override void Interact()
     {
@@ -27,5 +16,11 @@ public class ExitSas : Interactable
         {
             FindObjectOfType<SceneChanger>().LoadScene(sceneToLoad, indexToLoadIn);
         }
+    }
+
+    public override void ChangeCursor()
+    {
+        if(isUnlocked)
+            FindObjectOfType<CursorChanger>().GoChangeScene(false);
     }
 }

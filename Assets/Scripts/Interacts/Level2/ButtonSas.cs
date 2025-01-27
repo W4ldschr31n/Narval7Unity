@@ -27,11 +27,11 @@ public class ButtonSas : Interactable
         {
             waterAnimator.Play("water");
             exitSas.isUnlocked = true;
-            FindObjectOfType<Respiration>().IsInWather = true;
+            FindObjectOfType<Respiration>().Activate();
         }
     }
 
-    private void OnMouseEnter()
+    public override void ChangeCursor()
     {
         if(!isUsed)
             FindObjectOfType<CursorChanger>().GoInteract();
@@ -39,8 +39,4 @@ public class ButtonSas : Interactable
             FindObjectOfType<CursorChanger>().GoMove();
     }
 
-    private void OnMouseExit()
-    {
-        FindObjectOfType<CursorChanger>().GoNormal();
-    }
 }

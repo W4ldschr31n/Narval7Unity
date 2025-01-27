@@ -21,13 +21,10 @@ public class PickUpLog : Interactable
         Debug.Log("Recup journal: "+ nbNote);   
     }
 
-    private void OnMouseEnter()
+    public override void ChangeCursor()
     {
         cursorChanger.GoInteract();
+        this.enabled = false;
     }
 
-    private void OnMouseExit()
-    {
-        cursorChanger.GoNormal();
-    }
 }

@@ -6,4 +6,6 @@ public abstract class Interactable : MonoBehaviour
 {
     protected CursorChanger cursorChanger;
     public abstract void Interact();
+
+    public abstract void ChangeCursor();
 }

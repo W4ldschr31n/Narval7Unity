@@ -11,7 +11,6 @@ public class LockedWaypoint : Interactable
     // Start is called before the first frame update
     protected void Start()
     {
-        Debug.Log("premier");
         isLocked = true;
         inventaire = FindObjectOfType<S_Inventaire>();
         cursorChanger = FindObjectOfType<CursorChanger>();
@@ -53,5 +52,10 @@ public class LockedWaypoint : Interactable
     public virtual void InteractionWhenUnlocked()
     {
         Debug.Log("Interaction unlocked");
+    }
+
+    public override void ChangeCursor()
+    {
+        FindObjectOfType<CursorChanger>().GoInteract();
     }
 }

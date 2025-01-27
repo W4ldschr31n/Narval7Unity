@@ -18,11 +18,10 @@ public class ChangeScene : Interactable
 
     public override void Interact()
     {
-        Debug.Log("ChangeScene");
         sceneChanger.LoadScene(sceneToLoad, indexToSpawnIn);
     }
 
-    private void OnMouseEnter()
+    public override void ChangeCursor()
     {
         cursorChanger.GoChangeScene(isLeft);
     }

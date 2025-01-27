@@ -30,16 +30,15 @@ public class TriggerDialogue : Interactable
         }
     }
 
-    private void OnMouseEnter()
+    public override void ChangeCursor()
     {
         if(!hasTriggered)
             cursorChanger.GoListen();
+        else
+            cursorChanger.GoMove();
     }
 
-    private void OnMouseExit()
-    {
-        cursorChanger.GoNormal();
-    }
+
 
     public virtual void OnDialogueEnd()
     {

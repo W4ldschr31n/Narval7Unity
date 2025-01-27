@@ -20,14 +20,9 @@ public class PickUpObject : Interactable
         }
     }
     
-    private void OnMouseEnter()
+    public override void ChangeCursor()
     {
         cursorChanger.GoInteract();
-    }
-
-    private void OnMouseExit()
-    {
-        cursorChanger.GoNormal();
     }
 
     public virtual void OnPickup()

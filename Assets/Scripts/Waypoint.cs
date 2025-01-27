@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,5 +47,18 @@ public class Waypoint : MonoBehaviour
         }
         if(soundable != null)
             soundable.Sound();
+    }
+
+    private void OnMouseEnter()
+    {
+        if(interactable != null)
+            interactable.ChangeCursor();
+        else
+            FindObjectOfType<CursorChanger>().GoMove();
+    }
+
+    private void OnMouseExit()
+    {
+        FindObjectOfType<CursorChanger>().GoNormal();
     }
 }

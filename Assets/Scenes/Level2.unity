@@ -641,6 +641,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -3.39
       objectReference: {fileID: 0}
+    - target: {fileID: 904274868279061427, guid: fdea7b63078a936449bbedc95cf2be1c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1982085700251821266, guid: fdea7b63078a936449bbedc95cf2be1c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -711,6 +716,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sas
       objectReference: {fileID: 0}
+    - target: {fileID: 4567332013573049094, guid: fdea7b63078a936449bbedc95cf2be1c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5203148868990535714, guid: fdea7b63078a936449bbedc95cf2be1c,
         type: 3}
       propertyPath: m_IsActive
@@ -727,7 +737,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7459498059309587091, guid: fdea7b63078a936449bbedc95cf2be1c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8545572469418306228, guid: fdea7b63078a936449bbedc95cf2be1c,
@@ -1180,9 +1191,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89db20e611dda9d43a7d10016d2b8e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundData:
+  - clip: {fileID: 8300000, guid: 68844734fcb58484490457f83724a60a, type: 3}
+    volume: 1
+    oneShot: 1
+    hasBeenPlayed: 0
+  - clip: {fileID: 8300000, guid: f25b3c49093f73b41b21902bc4ec4773, type: 3}
+    volume: 1
+    oneShot: 1
+    hasBeenPlayed: 0
   clip: {fileID: 8300000, guid: 68844734fcb58484490457f83724a60a, type: 3}
   clip1: {fileID: 8300000, guid: f25b3c49093f73b41b21902bc4ec4773, type: 3}
   volume: 1
+  volume1: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

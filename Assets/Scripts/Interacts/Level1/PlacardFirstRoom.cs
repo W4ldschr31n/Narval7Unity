@@ -14,13 +14,7 @@ public class PlacardFirstRoom : Interactable
         FindObjectOfType<DialogueManager>().DisplaySimpleMessage("Un morceau de journal");
     }
 
-    private void OnMouseEnter()
-    {
-        FindObjectOfType<CursorChanger>().GoInteract();
-        
-    }
-
-    private void OnMouseExit()
+    public override void ChangeCursor()
     {
         FindObjectOfType<CursorChanger>().GoInteract();
     }
