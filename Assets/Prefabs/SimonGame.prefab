@@ -289,7 +289,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttons: {fileID: 609708930958851291}
   hint: {fileID: 5574695605447306226}
-  playerAnimator: {fileID: 0}
   gameAnimator: {fileID: 3123918987826056686}
   danceRounds:
   - timeBetweenHints: 1
